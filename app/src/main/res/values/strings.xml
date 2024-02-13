@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">MAD_Assignment1</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="api_key">ENTER A VALID API KEY</string>
+    <string name="cart_item_food_name">Food Name</string>
+    <string name="cart_item_quantity">Quantity: 1</string>
+    <string name="cart_item_price">Total Price: $10.00</string>
+    <string name="food_layout_food_name">Food Name</string>
+    <string name="food_layout_price">Price: $10.00</string>
+    <string name="food_layout_kilojoules">Kilojoules: 800</string>
+    <string name="food_item_description">Description: Delicious Food</string>
+    <string name="food_item_add_button">Add</string>
+    <string name="fragment_address_prompt">Please select your address</string>
+    <string name="fragment_Address_confirm_address_button">Confirm Address</string>
+    <string name="confirm_order_button">Confirm and Place Order</string>
+    <string name="go_back">Go Back</string>
+    <string name="create_account">Create Account</string>
+    <string name="already_got_account">Already got an account? Log In</string>
+    <string name="sign_up_with_email">SIGN UP WITH EMAIL</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="create_account_button">Create Account</string>
+    <string name="date_and_time">Date and Time</string>
+    <string name="order_date">Order Date</string>
+    <string name="order_time">Order Time</string>
+    <string name="confirm_date_and_time">Confirm Date and Time</string>
+    <string name="decrease_button_description">Decrease counter by 1</string>
+    <string name="increase_button_description">Increase counter by 1</string>
+    <string name="one">1</string>
+    <string name="add_to_order_button">Add to Order</string>
+    <string name="total">Total: $</string>
+</resources>

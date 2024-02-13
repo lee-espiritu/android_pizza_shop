@@ -1,0 +1,25 @@
+<!-- Layout for Confirmation Page -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray">
+
+    <include layout="@layout/reusable_top_section_layout"/>
+
+    <!-- Order Summary RecyclerView-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/orderSummaryRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/confirmOrderButton"
+        android:layout_below="@+id/reusableTopSectionLayout"/>
+
+    <!-- Confirm Order button -->
+    <Button
+        android:id="@+id/confirmOrderButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/confirm_order_button"/>
+</RelativeLayout>

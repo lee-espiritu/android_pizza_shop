@@ -1,0 +1,85 @@
+<!-- Layout for each food item in the food selection screen recyclerView grid -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/food_layout_rounded_corners"
+    android:paddingBottom="5dp">
+
+    <!-- Food Image -->
+    <ImageView
+        android:id="@+id/foodImageView"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:src="@drawable/background_home"
+        android:scaleType="fitXY"
+        android:padding="10dp"/>
+
+
+    <!-- Food Name -->
+    <TextView
+        android:id="@+id/foodNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:maxLines="1"
+        android:text="@string/food_layout_food_name"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!-- Price -->
+        <TextView
+            android:id="@+id/priceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:maxLines="1"
+            android:text="@string/food_layout_price"
+            android:textSize="12sp"/>
+
+        <!-- Kilojoules Display -->
+        <TextView
+            android:id="@+id/kilojoulesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:maxLines="1"
+            android:text="@string/food_layout_kilojoules"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/foodInfoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:maxLines="3"
+        android:minLines="3"
+        android:ellipsize="end"
+        android:text="@string/food_item_description"
+        android:textColor="@android:color/black"/>
+
+    <!-- Add button -->
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="3dp"
+        android:text="@string/food_item_add_button"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_green_dark"
+        android:clickable="true"
+        android:focusable="true"
+        app:backgroundTint="@null"
+        android:background="@drawable/add_button_background"/>
+</LinearLayout>

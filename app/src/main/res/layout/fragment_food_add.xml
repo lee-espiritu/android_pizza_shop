@@ -1,0 +1,170 @@
+<!-- Layout for expanded Food Details page -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".FoodAddFragment">
+
+    <!-- Guideline -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <!-- Food Image -->
+    <ImageView
+        android:id="@+id/foodImageView"
+        android:layout_width="422dp"
+        android:layout_height="223dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/background_home"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineTop"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Close Button -->
+    <ImageButton
+        android:id="@+id/closeButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="355dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/close_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/rounded_white_background"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodImageView">
+
+        <!-- Food Name Display -->
+        <TextView
+            android:id="@+id/foodNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="Food Name"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Price Display -->
+        <TextView
+            android:id="@+id/priceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="Price: $10.00"
+            android:textColor="@color/lightblack"
+            android:textSize="14sp" />
+
+        <!-- Kilojoules Display -->
+        <TextView
+            android:id="@+id/kilojoulesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="Kilojoules: 800"
+            android:textColor="@color/lightblack"
+            android:textSize="14sp" />
+
+        <!-- Food Information -->
+        <TextView
+            android:id="@+id/foodInfoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="10"
+            android:minLines="2"
+            android:text="Description: Delicious Food"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Decrease Button -->
+    <ImageButton
+        android:id="@+id/decrementButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="685dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/minus_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/decrease_button_description" />
+
+    <!-- Increase Button -->
+    <ImageButton
+        android:id="@+id/incrementButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="685dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/plus_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/increase_button_description" />
+
+    <!-- Counter Display -->
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="685dp"
+        android:gravity="center"
+        android:text="@string/one"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Add to Order Button -->
+    <Button
+        android:id="@+id/addToOrderButton"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="215dp"
+        android:layout_marginTop="675dp"
+        android:background="@drawable/add_to_order_background"
+        android:text="@string/add_to_order_button"
+        app:backgroundTint="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Total Price Display -->
+    <TextView
+        android:id="@+id/priceSum"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="215dp"
+        android:layout_marginTop="640dp"
+        android:text="@string/total"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".HomeFragment">
+
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background_home"
+        android:scaleType="centerCrop" />
+
+    <!-- Logo Image at the Top Left -->
+    <ImageView
+        android:layout_width="98dp"
+        android:layout_height="80dp"
+        android:layout_gravity="start|top"
+        android:layout_margin="16dp"
+        android:src="@drawable/logo" />
+
+    <!-- Buttons Container at the Top Right -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:layout_margin="16dp"
+        android:orientation="horizontal">
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_marginEnd="8dp"
+            android:onClick="openLogin"/>
+
+        <!-- Sign up Button -->
+        <Button
+            android:id="@+id/signUpButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign up" />
+
+        <!-- Sign up Button -->
+        <Button
+            android:id="@+id/signOutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Out" />
+    </LinearLayout>
+
+    <!-- Additional Buttons Container at the Bottom -->
+    <LinearLayout
+        android:layout_width="382dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
+
+        <!-- Food Selection Button -->
+        <Button
+            android:id="@+id/foodSelectionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Food selection" />
+        <!-- Quick Order Button -->
+        <Button
+            android:id="@+id/quickOrderButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Quick Order" />
+
+        <!-- Delivery Button -->
+        <Button
+            android:id="@+id/deliveryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Delivery" />
+
+        <!-- Pickup Button -->
+        <Button
+            android:id="@+id/pickupButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pickup" />
+    </LinearLayout>
+
+</FrameLayout>

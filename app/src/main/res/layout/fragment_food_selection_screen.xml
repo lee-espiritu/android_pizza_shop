@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@android:color/darker_gray">
+
+    <!-- Reusable Top Section -->
+    <include layout="@layout/reusable_top_section_layout"/>
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/lightergray"
+        android:elevation="4dp">
+
+        <!-- Pizzas -->
+        <ImageButton
+            android:id="@+id/btnPizzas"
+            android:layout_width="95dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/toolbar_pizza"
+            android:scaleType="fitCenter"
+            android:background="?android:attr/selectableItemBackground"/>
+
+        <!-- Sides -->
+        <ImageButton
+            android:id="@+id/btnSides"
+            android:layout_width="95dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/toolbar_sides"
+            android:scaleType="fitCenter"
+            android:background="?android:attr/selectableItemBackground"/>
+
+        <!-- Drinks -->
+        <ImageButton
+            android:id="@+id/btnDrinks"
+            android:layout_width="95dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/toolbar_drinks"
+            android:scaleType="fitCenter"
+            android:background="?android:attr/selectableItemBackground"/>
+
+        <!-- Desserts -->
+        <ImageButton
+            android:id="@+id/btnDesserts"
+            android:layout_width="95dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/toolbar_dessert"
+            android:scaleType="fitCenter"
+            android:background="?android:attr/selectableItemBackground"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- NestedScrollView for RecyclerView -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/lightgray">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2" />
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Linear container for Cart and Place Order buttons -->
+    <LinearLayout
+        android:id="@+id/bottomButtonsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="11dp"
+        android:paddingHorizontal="4dp"
+        android:layout_marginHorizontal="5dp"
+        android:background="@drawable/rounded_top_corners_white"
+        android:focusable="true"
+        android:clickable="true">
+
+        <!-- Cart Button -->
+        <Button
+            android:id="@+id/btnCart"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="2dp"
+            app:backgroundTint="@null"
+            android:background="@drawable/cart_button_background"
+            android:text="Cart" />
+
+        <!-- Place Order Button -->
+        <Button
+            android:id="@+id/btnPlaceOrder"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="2dp"
+            app:backgroundTint="@null"
+            android:background="@drawable/place_order_button_background"
+            android:text="Place Order >" />
+    </LinearLayout>
+
+</LinearLayout>

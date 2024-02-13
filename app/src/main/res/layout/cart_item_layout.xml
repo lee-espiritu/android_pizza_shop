@@ -1,0 +1,70 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_white_background"
+    android:layout_marginTop="8dp"
+    android:layout_marginHorizontal="5dp">
+
+    <!-- Name of food -->
+    <TextView
+        android:id="@+id/foodNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/cart_item_food_name"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <!-- Quantity -->
+    <TextView
+        android:id="@+id/quantityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_below="@id/foodNameTextView"
+        android:text="@string/cart_item_quantity"/>
+
+    <!-- Price -->
+    <TextView
+        android:id="@+id/totalPriceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_below="@id/quantityTextView"
+        android:text="@string/cart_item_price"/>
+
+    <!-- Image Buttons -->
+    <ImageButton
+        android:id="@+id/delete"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/bin" />
+
+    <ImageButton
+        android:id="@+id/plus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        android:layout_toStartOf="@id/delete"
+        android:layout_marginEnd="8dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/plus_button" />
+
+    <ImageButton
+        android:id="@+id/minus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        android:layout_toStartOf="@id/plus"
+        android:layout_marginEnd="8dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/minus_button_red" />
+</RelativeLayout>

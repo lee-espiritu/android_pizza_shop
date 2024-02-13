@@ -1,0 +1,5 @@
+<resources>
+    <style name="CustomErrorText" parent="TextAppearance.Design.Error">
+        <item name="android:textColor">#FF0000</item>
+    </style>
+</resources>
